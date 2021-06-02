@@ -1,0 +1,39 @@
+############################# Frontend #############################
+Abrir una ventana de comandos dentro de la aplicación.
+
+Paso 1: Instalar las dependencias - NodeJS
+npm install
+
+Paso 2: Levantar el servidor - Angular 
+ng serve
+
+Paso 3: Ingresar a :
+http://localhost:4200
+
+############################# Backend #############################
+
+Abrir una ventana de comandos en la carpeta Reto BCP - Backend
+
+Paso 1: 
+Restaurar los packetes NuGet
+
+Paso 2:  
+Usamos  **docker-compose** para crear una imagen del servicio **RetoBCP** y 
+crear una imagen de MongoDB a la cual se conectará, ambas imágenes se levantan en un contenedor y 
+se puede llamar al servicio a través del puerto 8081
+
+docker-compose up
+
+Paso 3: 
+Consumir el API: http://localhost:8081/api el cuál contiene 6 acciones:
+
+https://localhost:8081/api/TipoCambio
+
+GET		:/TipoCambio  - Lista los tipos de cambios que existen
+GET		:/TipoCambio/CambioMoneda - Cambia el monto de la moneda origen a destino
+GET		:/Usuario/login - devuelve el token que valida la creacion del nuevo tipo de cambio
+POST	:/TipoCambio/create - Crea un nuevo tipo de cambio-validando el token
+PUT		:/TipoCambio	  - Actualiza un determinado tipoCambio
+DELETE	:/TipoCambio/
+
+

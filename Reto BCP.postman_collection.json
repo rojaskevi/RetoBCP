@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "91a5a06c-d5d2-4c0f-859c-d0ac185d5b10",
+		"name": "Reto BCP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All TipoCambio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44317/api/TipoCambio",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"TipoCambio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create TipoCambio-TokenVerificacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monedaOrigen\":\"origenPrueba224\",\r\n    \"monedaDestino\":\"destinoPrueba224\",\r\n    \"cambio\":99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44317/api/TipoCambio/create?token=e272b614-8343-42ab-b5d8-b20d20a8afe8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"TipoCambio",
+						"create"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "e272b614-8343-42ab-b5d8-b20d20a8afe8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar TipoCambio",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": \"60b59b10f37bf6d91e9f8aa4\",\r\n        \"monedaOrigen\": \"origenPruebaa\",\r\n        \"monedaDestino\": \"destinoPruebae\",\r\n        \"cambio\": 98\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44317/api/TipoCambio",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"TipoCambio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar TipoCambio",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44317/api/TipoCambio/60b59b10f37bf6d91e9f8aa4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"TipoCambio",
+						"60b59b10f37bf6d91e9f8aa4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CambiarMonto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44317/api/TipoCambio/CambioMoneda?monedaOrigen=SOLES&monedaDestino=DOLARES&monto=3.8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"TipoCambio",
+						"CambioMoneda"
+					],
+					"query": [
+						{
+							"key": "monedaOrigen",
+							"value": "SOLES"
+						},
+						{
+							"key": "monedaDestino",
+							"value": "DOLARES"
+						},
+						{
+							"key": "monto",
+							"value": "3.8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerToken-post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44317/api/Usuario/login?username=kevin&password=pass123",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"Usuario",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "kevin"
+						},
+						{
+							"key": "password",
+							"value": "pass123"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
