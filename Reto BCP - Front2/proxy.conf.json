@@ -1,8 +1,0 @@
-{
-    "/api/TipoCambio/CambioMoneda/*":{
-        "target":"https://localhost:44317",
-        "secure": false,
-        "changeOrigin": true
-    }
-    
-}
